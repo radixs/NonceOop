@@ -1,7 +1,7 @@
 {
-  "name": "radix/NonceOop",
+  "name": "radix/nonce-oop",
   "description": "Wordpress Nonce OOP",
-  "homepage": "https://github.com/radixs/NonceOop",
+  "homepage": "https://github.com/radixs/nonce-oop",
   "keywords": ["WordPress", "wp_nonce", "OOP"],
   "authors": [
     {
