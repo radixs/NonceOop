@@ -17,12 +17,12 @@
   },
   "autoload": {
     "psr-4": {
-      "radixs\\NonceOop\\": "src"
+      "radix\\NonceOop\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "radixs\\NonceOop\\Tests\\": "tests/src/"
+      "radix\\NonceOop\\Tests\\": "tests/src/"
     }
   }
 }
