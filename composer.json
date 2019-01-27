@@ -1,7 +1,7 @@
 {
   "name": "radix/NonceOop",
   "description": "Wordpress Nonce OOP",
-  "homepage": "https://github.com/radix/NonceOop",
+  "homepage": "https://github.com/radixs/NonceOop",
   "keywords": ["WordPress", "wp_nonce", "OOP"],
   "authors": [
     {
@@ -17,12 +17,12 @@
   },
   "autoload": {
     "psr-4": {
-      "radix\\NonceOop\\": "src"
+      "radixs\\NonceOop\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "radix\\NonceOop\\Tests\\": "tests/src/"
+      "radixs\\NonceOop\\Tests\\": "tests/src/"
     }
   }
 }
