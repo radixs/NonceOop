@@ -2,7 +2,7 @@
 
 namespace radix\NonceOop;
 
-class AjaxNonce extends WordpressSimpleNonce
+class AjaxNonce extends SimpleNonce
 {
     /**
      * Verify that correct nonce was used with time limit. Checks against argument in the ajax request.
