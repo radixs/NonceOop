@@ -4,3 +4,5 @@ namespace radix\NonceOop;
 
 class NonceFacade
 {
+
+}
