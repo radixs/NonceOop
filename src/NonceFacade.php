@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace radix\NonceOop;
 
@@ -23,9 +24,8 @@ class NonceFacade
             $nonceService = new SimpleNonce();
         }
         $this->nonceService = $nonceService;
-        $this->action       = $action;
+        $this->action = $action;
     }
-
 
     /**
      * Create a simple nonce.
@@ -37,7 +37,6 @@ class NonceFacade
         return $this->nonceService->getNonce($this->action);
     }
 
-
     /**
      * Create input field with nonce.
      *
@@ -47,11 +46,14 @@ class NonceFacade
      *
      * @return string
      */
-    public function createField(string $name = "_wpnonce", bool $referer = true, bool $echo = true) : string
-    {
+    public function createField(
+        string $name = "_wpnonce",
+        bool $referer = true,
+        bool $echo = true
+    ) : string {
+
         return $this->nonceService->getNonceField($this->action, $name, $referer, $echo);
     }
-
 
     /**
      * Create an url with added nonce.
@@ -66,7 +68,6 @@ class NonceFacade
         return $this->nonceService->getNonceUrl($actionurl, $this->action, $name);
     }
 
-
     /**
      * Verify nonce.
      *
@@ -74,10 +75,8 @@ class NonceFacade
      *
      * @return bool
      */
-    public function check(string $toCheck)
+    public function check(string $toCheck) : bool
     {
         return (bool)$this->nonceService->verifyNonce($this->action, $toCheck);
     }
-
-    //TODO https://www.bynicolas.com/code/wordpress-nonce/
 }
