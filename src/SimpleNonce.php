@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace radix\NonceOop;
 
@@ -16,7 +17,6 @@ class SimpleNonce implements NonceServiceInterface
         return wp_create_nonce($action);
     }
 
-
     /**
      * Retrieve or display nonce hidden field for forms.
      *
@@ -32,11 +32,10 @@ class SimpleNonce implements NonceServiceInterface
         string $name = "_wpnonce",
         bool $referer = true,
         bool $echo = true
-    ) : string
-    {
+    ) : string {
+
         return wp_nonce_field($action, $name, $referer, $echo);
     }
-
 
     /**
      * Retrieve URL with nonce added to URL query.
@@ -51,21 +50,21 @@ class SimpleNonce implements NonceServiceInterface
         string $actionurl,
         string $action = '-1',
         string $name = '_wpnonce'
-    ) : string
-    {
+    ) : string {
+
         return wp_nonce_url($actionurl, $action, $name);
     }
-
 
     /**
      * Verify that correct nonce was used with time limit.
      *
-     * @param string|int $action Should give context to what is taking place and be the same when nonce was created.
+     * @param string|int $action Should give context to what is taking place
+     *                           and be the same when nonce was created.
      * @param string     $nonce  Nonce that was used in the form to verify
      *
-     * @return false|int
+     * @return bool|int
      */
-    public function verifyNonce(string $action, string $nonce)
+    public function verifyNonce(string $action = '-1', string $nonce)
     {
         return wp_verify_nonce($nonce, $action);
     }
