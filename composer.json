@@ -1,8 +1,13 @@
 {
   "name": "radix/nonce-oop",
+  "type": "library",
   "description": "Wordpress Nonce OOP",
   "homepage": "https://github.com/radixs/nonce-oop",
-  "keywords": ["WordPress", "wp_nonce", "OOP"],
+  "keywords": [
+    "wordpress",
+    "nonce"
+  ],
+  "license": "MIT",
   "authors": [
     {
       "name": "Radoslaw Kurowski",
@@ -13,7 +18,7 @@
     "php": ">=7.0"
   },
   "require-dev": {
-    "phpunit/phpunit" : "5.7"
+    "phpunit/phpunit" : "^7"
   },
   "autoload": {
     "psr-4": {
