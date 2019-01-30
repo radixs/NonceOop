@@ -13,7 +13,6 @@ interface NonceServiceInterface
      */
     public function getNonce(string $action) : string;
 
-
     /**
      * Create an input field with nonce.
      *
@@ -31,7 +30,6 @@ interface NonceServiceInterface
         bool $echo = true
     ) : string;
 
-
     /**
      * Create an url containing a nonce.
      *
@@ -46,7 +44,6 @@ interface NonceServiceInterface
         string $action = '-1',
         string $name = '_wpnonce'
     ) : string;
-
 
     /**
      * Verify nonce.
