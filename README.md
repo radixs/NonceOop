@@ -55,6 +55,3 @@ vendor/bin/phpunit --bootstrap vendor/autoload.php vendor/radix/nonce-oop/tests/
 ```
 
 Please note that you need to have PHPUnit installed.
-
-
-/https://phpunit.de/man
