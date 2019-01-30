@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace radix\NonceOop;
 
@@ -10,10 +11,10 @@ class AjaxNonce extends SimpleNonce
      * @param string|int $action         Action name.
      * @param string     $queryArgument  Query argument that holds nonce as value.
      *
-     * @return false|int
+     * @return bool|int
      */
     public function verifyNonce(string $action, string $queryArgument)
     {
-        return check_ajax_referer($nonce, $action);
+        return check_ajax_referer($action, $queryArgument, false);
     }
 }
